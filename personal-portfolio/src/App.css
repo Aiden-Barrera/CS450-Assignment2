@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Remove default body margin */
+body {
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Main app container */
+.personal-profile-app {
+  display: flex;
+  flex-direction: column; /* Stack header and content vertically */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the header navigation */
+.header-navigation {
+  display: flex; /* Use Flexbox for horizontal layout */
+  justify-content: center; /* Space out items evenly */
+  align-items: center; /* Align items vertically */
+  padding: 15px 30px; /* Add space around the navbar */
+  background-color: #333; /* Dark background */
+  color: white; /* White text color */
+  height: 100px;
+  position: sticky; /* Make it stick to the top */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it appears above other content */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Style for the navigation menu */
+.navigation-menu {
+  display: flex; /* Use Flexbox for horizontal links */
+  list-style: none; /* Remove bullet points */
+  gap: 15px; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-size: 16px;
 }
 
-.card {
-  padding: 2em;
+/* Style for individual navigation items */
+.navigation-menu p {
+  color: white; /* White text color */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin: 0; /* Remove default paragraph margin */
+  padding: 10px 15px; /* Add padding for better click area */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-.read-the-docs {
-  color: #888;
+/* Hover effect for navigation items */
+.navigation-menu p:hover {
+  background-color: #555; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Main content area */
+.main-content-area {
+  flex: 1; /* Take up remaining space */
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+}
+
+/* Hide scrollbars globally */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  display: none;
 }
