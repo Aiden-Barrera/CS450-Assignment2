@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Portfolio.css';
+import Card from './components/Card';
 
 function Portfolio() {
   const [projects] = useState([
@@ -18,17 +19,9 @@ function Portfolio() {
   ]);
 
   return (
-    <div className="portfolio-section">
+    <div className="portfolio-section" style={{ display: 'flex', flexDirection: 'column',flexWrap: 'wrap', justifyContent: 'center', gap: '20px', padding: '20px' }}>
       {projects.map((project, index) => (
-        <div key={index} className="project-card">
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <div className="technologies">
-            {project.technologies.map((tech, techIndex) => (
-              <span key={techIndex} className="tech-tag">{tech}</span>
-            ))}
-          </div>
-        </div>
+        <Card key={index} project={project} />
       ))}
     </div>
   );
