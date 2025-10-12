@@ -44,7 +44,7 @@ function About() {
             boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)', 
             textAlign: 'center'
           }}>
-            <img src="/PersonalPic.JPEG" alt="About Me" style={{
+            <img src="/CS450-Assignment2/PersonalPic.JPEG" alt="About Me" style={{
               width: "200px", 
               height: "200px", 
               objectFit: "cover",
