@@ -4,20 +4,8 @@ import './Contact.css';
 function Contact() {
   const contactInfo = [
     {
-      title: 'Email',
-      detail: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
-      icon: '📧'
-    },
-    {
-      title: 'Phone',
-      detail: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-      icon: '📱'
-    },
-    {
       title: 'Location',
-      detail: 'Your City, State',
+      detail: 'Newark, NJ',
       link: null,
       icon: '📍'
     },
@@ -40,19 +28,13 @@ function Contact() {
           ))}
           
           <div className="social-media">
-            <h4 className="social-title">Follow Me</h4>
+            <h4 className="social-title">Connect With Me</h4>
             <div className="social-links">
-              <a href="#" className="social-link github">
+              <a href="https://github.com/Aiden-Barrera" className="social-link github">
                 <span className="social-icon">🐙</span> GitHub
               </a>
-              <a href="#" className="social-link linkedin">
+              <a href="https://linkedin.com/in/aiden-barrera" className="social-link linkedin">
                 <span className="social-icon">💼</span> LinkedIn
-              </a>
-              <a href="#" className="social-link twitter">
-                <span className="social-icon">🐦</span> Twitter
-              </a>
-              <a href="#" className="social-link instagram">
-                <span className="social-icon">📸</span> Instagram
               </a>
             </div>
           </div>
